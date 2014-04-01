@@ -14,8 +14,8 @@ var id_spreadsheet = '0AkqsHAmwYbpudDJyNnBmbW9Cd1R6eW5BOG4xU3FBM0E',
 	//load_calendar(id_calendar, calData);
 
 
-var transThunderLayer = L.tileLayer(transThunderUrl , {attribution: thunAttrib}),
-    bruclinLayer = L.mapbox.tileLayer(tile_bruclinId),
+var transThunderLayer = L.tileLayer(transThunderUrl , {attribution: thunAttrib,  format:'png64'}),
+    bruclinLayer = L.mapbox.tileLayer(tile_bruclinId, {format:  'png64'}),
     transMadLayer = L.mapbox.tileLayer(tile_transMadId);
 
 var groupTransportLayer = L.layerGroup([transThunderLayer, transMadLayer]);

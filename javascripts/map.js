@@ -30,7 +30,7 @@ var baseLayers = {
 
 var controlLayers = L.control.layers(baseLayers).addTo(map);
 	
-map.addControl( new L.Control.Gps() );
+L.control.locate().addTo(map);
 	
 function mapData(myData){
 	var bruclinEventos2014Layer = L.mapbox.featureLayer().setGeoJSON(myData);
